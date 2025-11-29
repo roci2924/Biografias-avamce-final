@@ -1,0 +1,192 @@
+/* style.css */
+
+/* Reset simple */
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html,body { height: 100%; }
+
+body{
+  font-family: "Poppins", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  background: radial-gradient(1200px 600px at 10% 10%, rgba(20,10,40,0.95), transparent),
+              linear-gradient(180deg, #07041a 0%, #0f0a23 40%, #09021a 100%);
+  color: #e9e7ee;
+  -webkit-font-smoothing: antialiased;
+  padding: 36px;
+}
+
+/* Header */
+.site-header{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  margin-bottom: 36px;
+}
+.brand{
+  font-weight: 700;
+  font-size: 22px;
+  color: #fff;
+  letter-spacing: 0.2px;
+}
+.main-nav {
+  display:flex;
+  gap: 28px;
+  align-items:center;
+}
+.main-nav a{
+  color: rgba(255,255,255,0.75);
+  text-decoration: none;
+  font-weight: 500;
+  padding: 8px 10px;
+}
+.main-nav a.active{
+  color: #fff;
+  font-weight: 700;
+}
+
+/* Container principal */
+.container{
+  max-width: 1300px;
+  margin: 0 auto;
+}
+
+/* Fila de tarjetas */
+.cards-row{
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: 36px;
+  align-items: start;
+}
+
+/* Card base */
+.card{
+  border-radius: 32px;
+  padding: 28px;
+  background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+  box-shadow:
+    0 18px 40px rgba(5,5,10,0.6),
+    inset 0 6px 18px rgba(255,255,255,0.02);
+}
+
+/* Card foto estilo oscuro y profundo */
+.card-photo{
+  background: linear-gradient(180deg, rgba(255,255,255,0.01), rgba(255,255,255,0.02));
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  padding: 40px;
+  min-height: 420px;
+}
+
+/* Marco y foto redondeada grande */
+.photo-frame{
+  width: 100%;
+  max-width: 420px;
+  aspect-ratio: 1 / 1;
+  border-radius: 56px;
+  background: linear-gradient(180deg, rgba(0,0,0,0.45), rgba(255,255,255,0.02));
+  padding: 18px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  box-shadow: 0 30px 60px rgba(8,5,15,0.75), inset 0 4px 10px rgba(255,255,255,0.02);
+}
+.photo-frame img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 36px;
+  display:block;
+}
+
+/* Card info con gradiente llamativo */
+.card-info{
+  padding: 28px;
+  border-radius: 36px;
+  min-height: 420px;
+  background: linear-gradient(135deg, #2b0b6b 0%, #d71f2a 30%, #ff4f6a 55%, #b94aff 100%);
+  color: rgba(255,255,255,0.95);
+  box-shadow: 0 24px 60px rgba(8,5,15,0.8);
+  position: relative;
+  overflow: hidden;
+}
+
+/* Interior con padding adicional y opacidad del fondo para legibilidad */
+.content-inner{
+  background: rgba(0,0,0,0.05);
+  padding: 26px;
+  border-radius: 22px;
+  max-height: 760px;
+  overflow-y: auto;
+}
+
+/* Titulos de secciones dentro de la card */
+.card-info h3{
+  font-size: 16px;
+  margin-bottom: 10px;
+  font-weight: 700;
+  color: #fff;
+}
+
+/* Listas con punto circular */
+.dot-list{
+  list-style: none;
+  margin-bottom: 18px;
+  padding-left: 18px;
+}
+.dot-list li{
+  position: relative;
+  padding-left: 22px;
+  margin-bottom: 10px;
+  line-height: 1.45;
+  font-size: 14px;
+  color: rgba(255,255,255,0.95);
+}
+.dot-list li::before{
+  content: "";
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.95);
+  position: absolute;
+  left: 0;
+  top: 6px;
+  box-shadow: 0 1px 0 rgba(0,0,0,0.25) inset;
+}
+
+/* Barra inferior con texto grande y borde blanco redondeado */
+.hero-title-wrap{
+  margin-top: 48px;
+  display:flex;
+  justify-content:center;
+}
+.hero-title{
+  width: 100%;
+  max-width: 1200px;
+  padding: 26px 36px;
+  border-radius: 44px;
+  border: 4px solid rgba(255,255,255,0.85);
+  text-align: center;
+  font-size: 46px;
+  font-weight: 800;
+  color: white;
+  background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+  box-shadow: 0 18px 40px rgba(6,6,12,0.6);
+}
+
+/* Estilos responsivos */
+@media (max-width: 1000px){
+  .cards-row {
+    grid-template-columns: 1fr;
+  }
+  .photo-frame { max-width: 320px; }
+  .hero-title { font-size: 34px; padding: 20px; border-radius: 32px; }
+}
+
+@media (max-width: 480px){
+  body { padding: 18px; }
+  .brand { font-size: 18px; }
+  .main-nav { gap: 12px; font-size: 13px; }
+  .hero-title { font-size: 24px; padding: 14px; }
+  .card { padding: 18px; border-radius: 22px; }
+  .photo-frame { border-radius: 28px; }
+}

@@ -1,0 +1,159 @@
+/* 👇 Ajustes generales */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    background: linear-gradient(135deg, #00051a, #001343);
+    color: white;
+}
+
+
+.site-header{
+  width: 100%;
+  padding: 28px clamp(18px, 4vw, 48px);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  z-index: 10;
+}
+.brand{
+  font-weight:700;
+  letter-spacing:0.2px;
+  color: var(--muted);
+}
+.main-nav{
+  display:flex;
+  gap: 28px;
+  align-items:center;
+}
+.nav-link{
+  color: var(--muted);
+  text-decoration: none;
+  font-weight: 500;
+  padding: 6px 0;
+  transition: color .18s ease, transform .12s ease;
+}
+.nav-link:hover{ color: white; transform: translateY(-2px); }
+.nav-link.active{
+  color: white;
+  font-weight:700;
+}
+
+
+
+/* 👇 ABOUT SECTION */
+.about {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 70px 60px;
+    gap: 60px;
+}
+
+.about-text {
+    background: rgba(255, 255, 255, 0.08);
+    padding: 40px;
+    border-radius: 22px;
+    width: 50%;
+}
+
+.about-text h1 {
+    font-size: 55px;
+    margin-bottom: 25px;
+}
+
+.about-text p {
+    line-height: 1.6;
+    font-size: 16px;
+}
+
+.about-img img {
+    width: 420px;
+    height: auto;
+    border-radius: 22px;
+    object-fit: cover;
+}
+
+/* Sección general */
+.part-of-me {
+    width: 100%;
+    padding: 60px 0;
+    display: flex;
+    justify-content: center;
+}
+
+.pom-container {
+    width: 85%;
+    max-width: 1300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    flex-wrap: wrap;
+}
+
+/* Caja del video */
+.pom-video-box {
+    width: 300px;
+    height: 450px;
+    position: relative;
+    border-radius: 25px;
+    overflow: hidden;
+}
+
+.pom-video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+
+
+
+.pom-logo {
+    font-size: 20px;
+    display: block;
+    margin-top: 4px;
+}
+
+/* Texto derecho */
+.pom-text-box {
+    flex: 1;
+    min-width: 300px;
+    padding: 40px;
+    background: linear-gradient(135deg, rgba(255,255,255,0.08), rgba(255,255,255,0.03));
+    border-radius: 30px;
+    color: white;
+    backdrop-filter: blur(10px);
+}
+
+.pom-text-box h2 {
+    font-size: 65px;
+    font-weight: 800;
+    margin-bottom: 10px;
+}
+
+.pom-text-box h3 {
+    font-size: 28px;
+    font-weight: 300;
+    margin-bottom: 20px;
+}
+
+.pom-paragraph {
+    font-size: 18px;
+    line-height: 1.6;
+    font-weight: 400;
+}
+
+/* Responsive */
+@media (max-width: 850px) {
+    .pom-text-box h2 {
+        font-size: 45px;
+    }
+}
